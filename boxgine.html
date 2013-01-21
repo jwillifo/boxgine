@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Boxgine | 1.1</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="inc/main.css">
+<script src="inc/boxgine.js" type="text/javascript"></script>
+</head>
+<body>
+<header>
+<h1><img src="box.png">Boxgine v1.1</h1>
+<br>
+</header>
+<section>
+<fieldset>
+    <legend>Width | Height | Depth</legend>
+    <input type="text" id="charWidth_txt" size="2" value="64">
+    <input type="text" id="charHeight_txt" size="2" value="28">
+    <input type="text" id="boxDepth_txt" size="2" value="3">
+    <button type="button" onclick="gen_btn_Click()" autofocus="true">Generate</button>
+    <button type="button" onclick="clear_btn_Click()">Clear</button>
+</fieldset>
+<fieldset>
+    <legend>Boxes</legend>
+    <textarea rows="28" cols="64" id="grid_txt" style="font-family: 'Courier New'"></textarea>
+</fieldset>
+</section>
+<footer>
+<h4><a href="http://www.johnwilliford.com">&copy; 2013 J.W.</a></h4>
+</footer>
+</body>
+</html>
