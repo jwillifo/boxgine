@@ -24,6 +24,9 @@ img, canvas {
   margin-right: 10px;
   border: 1px solid #E34400;
 }
+img {
+  border: none;
+}
 canvas { background-color: #F0F0F0;}
 article a:nth-of-type(3n) img{
   margin: 0;
