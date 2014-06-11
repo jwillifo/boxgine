@@ -1,36 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>Boxgine | 1.2</title>
 <script src="boxgine.js" type="text/javascript"></script>
 <style>
-    canvas, fieldset, textarea { background-color: #F0F0F0; border: 2px solid #ff0000;}
-    fieldset { position:absolute; margin-left: 300px; }
-    textarea { font-family: 'Courier New', Courier, monospace;}
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+canvas, fieldset, textarea{
+    background-color: #f0f0f0;
+    border: 1px solid #cccccc;
+    display: inline-block;
+    vertical-align: top;
+    margin: 7px;
+    font-family: 'Courier New', Courier, monospace;
+}
+section{
+    width: 768px;
+    margin: 0px auto;
+    text-align: center;
+}
 </style>
 </head>
 <body>
 <section>
-    <canvas id="map" width="750px" height="450px">
+    <h1>Boxgine 1.2</h1>
+    <img src="img/cube.png" />
+    <img src="img/0L0L.png" />
+    <img src="img/L0L0.png" />
+    <img src="img/0LL0.png" />
+    <img src="img/00LL.png" />
+    <img src="img/LL00.png" />
+    <img src="img/L00L.png" />
+    <img src="img/LLL0.png" />
+    <img src="img/L0LL.png" />
+    <img src="img/0LLL.png" />
+    <img src="img/LL0L.png" />
+    <img src="img/LLLL.png" />
 </section>
 <section>
-    <fieldset>
+    <canvas id="map" width="750px" height="450px"></canvas>
+</section>
+<section>
+   <textarea id="grid_txt" rows="32" cols="32"></textarea>
+   <fieldset>
         <legend>Width - Height - Qty</legend>
-        <input id="charWidth_txt" type="text" size="2" value="32" onchange="redraw('charWidth_txt','width_rng')">
-        <input id="width_rng" type="range"  min="2" max="32" step="1" value="32" onchange="redraw('width_rng','charWidth_txt')">
-        <br>
-        <input id="charHeight_txt" type="text" size="2" value="32" onchange="redraw('charHeight_txt','height_rng')">
-        <input id="height_rng" type="range" min="2" max="32" step="1" value="32" onchange="redraw('height_rng','charHeight_txt')">
-        <br>
-        <input id="boxDepth_txt" type="text" size="2" value="3" onchange="redraw('boxDepth_txt','depth_rng')">
-        <input id="depth_rng" type="range" min="1" max="20" step="1" value="3" onchange="redraw('depth_rng','boxDepth_txt')">
-        <br>
+        <input id="charWidth_txt" type="text" size="2" value="32" onchange="redraw('charWidth_txt','width_rng')" />
+        <input id="width_rng" type="range"  min="2" max="32" step="1" value="32" onchange="redraw('width_rng','charWidth_txt')" />
+        <br />
+        <input id="charHeight_txt" type="text" size="2" value="32" onchange="redraw('charHeight_txt','height_rng')" />
+        <input id="height_rng" type="range" min="2" max="32" step="1" value="32" onchange="redraw('height_rng','charHeight_txt')" />
+        <br />
+        <input id="boxDepth_txt" type="text" size="2" value="3" onchange="redraw('boxDepth_txt','depth_rng')" />
+        <input id="depth_rng" type="range" min="1" max="20" step="1" value="3" onchange="redraw('depth_rng','boxDepth_txt')" />
+        <br />
         <button type="button" onclick="gen_btn_Click()" autofocus="true">Generate</button>
         <button type="button" onclick="clear_btn_Click()">Clear</button>
     </fieldset>
-    <textarea id="grid_txt" rows="32" cols="32"></textarea>
 </section>
-<script>window.onload = buildArr;</script>
+<script>
+    window.onload = buildArr;
+</script>
 </body>
 </html>
